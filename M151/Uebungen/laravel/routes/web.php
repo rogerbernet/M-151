@@ -18,3 +18,10 @@ Route::get('/', function () {
 });
 Route::get('/products', [\App\Http\Controllers\ProductController::class, 'list']);
 Route::get('/product/{id}', [\App\Http\Controllers\ProductController::class, 'detail']);
+
+Route::get('/register', [\App\Http\Controllers\RegistrationController::class, 'create']);
+Route::post('register', [\App\Http\Controllers\RegistrationController::class, 'store']);
+
+Route::get('/login', [\App\Http\Controllers\SessionsController::class, 'create']);
+Route::post('/login', [\App\Http\Controllers\SessionsController::class, 'store']);
+Route::get('/logout', [\App\Http\Controllers\SessionsController::class, 'destroy']);
