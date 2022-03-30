@@ -23,5 +23,7 @@ Route::get('/register', [\App\Http\Controllers\RegistrationController::class, 'c
 Route::post('register', [\App\Http\Controllers\RegistrationController::class, 'store']);
 
 Route::get('/login', [\App\Http\Controllers\SessionsController::class, 'create']);
-Route::post('/login', [\App\Http\Controllers\SessionsController::class, 'store']);
-Route::get('/logout', [\App\Http\Controllers\SessionsController::class, 'destroy']);
+Route::post('/login', [\App\Http\Controllers\SessionsController::class, 'login']);
+Route::get('/logout', [\App\Http\Controllers\SessionsController::class, 'logout']);
+Route::post('/addProduct', [\App\Http\Controllers\CartController::class, 'addProduct']);
+Route::get('/cart', [\App\Http\Controllers\CartController::class, 'cart']);
