@@ -1,3 +1,4 @@
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <style>
     table{
         margin: auto;
@@ -6,7 +7,11 @@
         text-align: center;
         margin: auto; 
     }
+
 </style>
+<form action="/">
+        <button class="main_button" type="submit">Home</button>
+</form>
 <div>
 <table>
     <tr>

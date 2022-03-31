@@ -5,23 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Webshop</title>
-        <style>
-            div{
-                text-align: center;
-                margin: 0%;
-            }
-            table{
-                text-align: center;
-                margin: auto;
-            }
-            button{
-                border: none;
-                border-radius: 12px;
-                height: 50px;
-                width: 150px;
-            }
-        </style>
-
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
         <div>
@@ -31,14 +15,14 @@
             <tr>
                 <td>
                 <form action="/login">
-                <button type="submit">Anmelden</button>
+                <button class="main_button" type="submit">Anmelden</button>
                 </form>
                 </td>
             </tr>
             <tr>
                 <td>
                 <form action="/register">
-                <button type="submit">Registrieren</button>
+                <button class="main_button" type="submit">Registrieren</button>
                 </form>
                 </td>
             </tr>
@@ -46,7 +30,7 @@
         <?php if(null !== session()->get('userId')) {?>
             <tr><td>
                 <form action="/logout">
-                    <button type="submit">Logout</button>
+                    <button class="main_button" type="submit">Logout</button>
                 </form>
             </td></tr>
         <?php } ?> 

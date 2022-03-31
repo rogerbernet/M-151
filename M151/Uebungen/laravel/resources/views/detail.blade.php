@@ -1,3 +1,4 @@
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <style>
     .product{
         height: 300px;
@@ -20,6 +21,9 @@
        margin: auto;
     }
 </style>
+<form action="/products">
+       <button class="main_button" type="submit">Back to Products</button>
+</form>
 <div class="productDiv" >
 <h1>{{$product->name}}</h1>
 <img src="{{$product->image}}" class="product">

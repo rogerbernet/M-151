@@ -14,13 +14,13 @@ class CartController extends Controller
         else{
             $id = $request->input("id");
             $count = $request->input("count");
-            session()->put($id,$count);
+            session()->put('product'.$id,$count);
             return redirect("/products");
         }
     }
     public function cart(){
         $products = \App\Models\Product::all();
 
-        return view('cart', ['products' => $products]);
+        return view('cart', ['products' => $products], ['total'=> 0]);
     }
 }

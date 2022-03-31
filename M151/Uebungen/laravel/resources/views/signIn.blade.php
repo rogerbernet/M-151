@@ -1,3 +1,4 @@
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <h2>Log In</h2>
     
     <form method="POST" action="/login">
@@ -8,5 +9,4 @@
             <label for="password">Password:</label>
             <input type="password" id="password" name="password">
             <button type="submit" >Login</button>
-        
     </form>
